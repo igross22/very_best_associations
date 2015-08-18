@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post "/create_favorite", :controller => "favorites", :action => "create"
 
   # READ
+  get "/", :controller => "favorites", :action => "index"
   get "/favorites", :controller => "favorites", :action => "index"
   get "/favorites/:id", :controller => "favorites", :action => "show"
 

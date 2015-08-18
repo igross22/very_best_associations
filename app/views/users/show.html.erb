@@ -7,7 +7,15 @@
     <dl class="dl-horizontal">
       <dt>Username</dt>
       <dd><%= @user.username %></dd>
-
+      <dt>Favorites</dt>
+      <dd>
+        <ul class="list-group">
+         <%= @user.favorites.each do |favorite| %>
+          <li class="list-group-item">
+            <%= favorite.dish.name %> at <%=favorite.venue.name %>
+          </li>
+        <% end %>
+      </dd>
     </dl>
 
     <div class="btn-group btn-group-justified">
